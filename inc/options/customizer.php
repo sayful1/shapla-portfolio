@@ -27,7 +27,6 @@ function shapla_portfolio_get_options(){
         'phone'                     => '',
         'email'                     => '',
         'logo'                      => '',
-        'show_search'               => true,
         'show_related_project'      => true,
         'retated_project_text'      => __('Other Projects', 'shapla-portfolio'),
         'show_portfolio_cta'        => false,
@@ -148,23 +147,6 @@ function shapla_portfolio_customize_register( $wp_customize ) {
         'section'  => 'sp_portfolio_header_section',
         'settings' => 'shapla_portfolio_options[email]',
         'type'     => 'text',
-    ) ) );
-
-    // Site Search form
-    $wp_customize->add_setting( 'shapla_portfolio_options[show_search]', array(
-        'default'     => true,
-        'capability'  => 'edit_theme_options',
-        'type'        => 'option',
-        'transport'   => 'refresh',
-        'sanitize_callback' => 'shapla_portfolio_checkbox',
-    ) );
-
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'shapla_portfolio_options[show_search]', array(
-        'label'    => __( 'Show search icon on navigation', 'shapla-portfolio' ),
-        'description' => __( 'Check if you want to show search icon on navigation or uncheck if your do not want to show.', 'shapla-portfolio' ),
-        'section'  => 'sp_portfolio_header_section',
-        'settings' => 'shapla_portfolio_options[show_search]',
-        'type'     => 'checkbox',
     ) ) );
 
     // Footer Copyright text
