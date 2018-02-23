@@ -7,7 +7,7 @@ Description: Minimalist Portfolio and Blogging WordPress Theme.
 Version: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
-Tags: white, black, responsive-layout, custom-menu, featured-images, post-formats, sticky-post, translation-ready
+Tags: custom-menu, featured-images, post-formats, sticky-post, translation-ready
 Text Domain: shapla-portfolio
 
 This theme, like WordPress, is licensed under the GPL.
@@ -60,36 +60,6 @@ p {
     -webkit-hyphens: none !important;
     -ms-hyphens: none !important;
     hyphens: none !important;
-}
-
-/*---------------------------------------
-## Pre loader
------------------------------------------*/
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fefefe;
-    z-index: 99999;
-    height: 100%;
-    width: 100%;
-    overflow: hidden !important;
-}
-
-.status {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-image: url(assets/img/loading-big.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    margin: -20px 0 0 -20px;
 }
 
 /*--------------------------------------------------------------
@@ -999,7 +969,7 @@ a.post-thumbnail:focus {
 }
 
 .page-title-section {
-    background: url("assets/img/pattern.jpg") repeat scroll left top #f8f8f8;
+    background-color: #f1f1f1;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05) inset, 0 -5px 15px 0 rgba(0, 0, 0, 0.05) inset;
     margin: 0 auto;
     padding: 30px 0 35px;

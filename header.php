@@ -26,11 +26,6 @@
 
 <body <?php body_class(); ?>>
 
-<!-- PRE LOADER -->
-<div class="preloader">
-    <div class="status">&nbsp;</div>
-</div>
-
 <div id="page" class="hfeed site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'shapla-portfolio' ); ?></a>
 

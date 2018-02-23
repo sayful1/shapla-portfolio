@@ -27,19 +27,6 @@
     $("input[type='submit']").addClass("btn btn-default").removeClass("form-control");
     $("img").addClass("img-responsive");
 
-    // Search toggle.
-    $('.search-toggle').on('click', function (event) {
-        var that = $(this),
-            wrapper = $('.search-box-wrapper');
-
-        that.toggleClass('active');
-        wrapper.toggleClass('hide');
-
-        if (that.is('.active') || $('.search-toggle a')[0] === event.target) {
-            wrapper.find('.search-field').focus();
-        }
-    });
-
     if ($().responsiveSlides) {
         $("#portfolio-slider").responsiveSlides({
             auto: true,
