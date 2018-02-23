@@ -1,0 +1,36 @@
+.fixed--header {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .headroom {
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        &--unpinned {
+            transform: translateY(-100%);
+        }
+        &--pinned {
+            transform: translateY(0%);
+        }
+    }
+
+    @media screen and (max-width: 782px) {
+        &.admin-bar & {
+            .site-header {
+                top: 46px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 783px) {
+        &.admin-bar {
+            .site-header {
+                top: 32px;
+            }
+        }
+    }
+}

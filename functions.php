@@ -165,15 +165,23 @@ endif;
  * Enqueue scripts and styles.
  */
 function shapla_portfolio_scripts() {
-	wp_enqueue_style( 'shapla-portfolio-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'shapla-portfolio', get_stylesheet_uri() );
 
-	wp_register_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array( 'shapla-portfolio-style' ), '3.3.4', 'all' );
+	wp_register_style( 'bootstrap',
+		get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css',
+		array( 'shapla-portfolio' ),
+		'3.3.4',
+		'all'
+	);
 
 	wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.4', true );
 
 
 	wp_enqueue_script( 'plugins-js', get_template_directory_uri() . '/assets/js/plugins.js', array( 'jquery' ), '1.0.0', true );
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'shapla-portfolio', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0.0', true );
+	wp_localize_script( 'shapla-portfolio', 'ShaplaPortfolio', array(
+		'is_sticky_header' => true,
+	) );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'shapla-portfolio-html5', get_template_directory_uri() . '/assets/js/html5.js', array(), '3.7.3' );
