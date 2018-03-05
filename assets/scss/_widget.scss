@@ -1,0 +1,17 @@
+.hero-content-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content-inner {
+  padding: 50px 0;
+}
+
+.hero-content-inner .section-title::before {
+  border-top: 0;
+}
+
+.hero-content-inner .section-title {
+  font-size: 24px;
+  text-transform: uppercase;
+}

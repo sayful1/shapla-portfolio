@@ -62,6 +62,14 @@ if ( ! function_exists( 'shapla_portfolio_setup' ) ) :
 			'caption',
 		) );
 
+		/**
+		 * ShaplaTools
+		 */
+		add_theme_support( 'shaplatools', array(
+			'slider',
+			'portfolio'
+		) );
+
 		/*
 		 * Enable support for Post Formats.
 		 * See https://developer.wordpress.org/themes/functionality/post-formats/
@@ -183,7 +191,7 @@ function shapla_portfolio_scripts() {
 	) );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'shapla-portfolio-html5', $assets() . '/js/html5.js', array(), '3.7.3' );
+	wp_enqueue_script( 'shapla-portfolio-html5', $assets . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'shapla-portfolio-html5', 'conditional', 'lt IE 9' );
 
 	if ( ! is_shaplatools_activated() ) {
