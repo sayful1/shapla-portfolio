@@ -444,18 +444,37 @@ img.alignnone {
     top: 32px; } }
 
 .hero-content-wrapper {
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background: no-repeat fixed center center; }
 
 .hero-content-inner {
   padding: 50px 0; }
+  .hero-content-inner .section-title {
+    font-size: 24px;
+    text-transform: uppercase; }
+    .hero-content-inner .section-title::before {
+      border-top: 0; }
 
-.hero-content-inner .section-title::before {
-  border-top: 0; }
+.section-intro {
+  padding: 30px 0; }
+  .section-intro h1 {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: normal;
+    font-size: 50px; }
+    .section-intro h1 > span {
+      color: #286090; }
 
-.hero-content-inner .section-title {
-  font-size: 24px;
-  text-transform: uppercase; }
+.section-call-to-action {
+  background: #363F48;
+  padding: 70px 0;
+  color: #fff; }
+  .section-call-to-action h2 {
+    font-size: 36px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0; }
 
 /*Site Header*/
 .site-header {
@@ -959,16 +978,6 @@ a.post-thumbnail:focus {
 .homepage-featured-item {
   background-color: #F8F8F8; }
 
-.section-intro h1 {
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1;
-  font-weight: 300;
-  font-size: 50px; }
-
-.section-intro h1 > span {
-  color: #286090; }
-
 .section-featured-posts .post-content {
   padding: 15px; }
 
@@ -985,17 +994,6 @@ a.post-thumbnail:focus {
 
 .section-recent-projects .single-portfolio-item {
   margin: 0 -15px; }
-
-.section-call-to-action {
-  background: #363F48;
-  padding: 70px 0;
-  color: #fff; }
-
-.section-call-to-action h2 {
-  font-size: 36px;
-  line-height: 150%;
-  margin: 0;
-  padding: 0; }
 
 /*--------------------------------------------------------------
 ## Template - Portfolio

@@ -17,8 +17,6 @@ class Shapla_Portfolio_Widget_Contact extends WP_Widget {
 	} // end constructor
 
 	function widget( $args, $instance ) {
-		extract( $args );
-
 		// VARS FROM WIDGET SETTINGS
 		$title        = apply_filters( 'widget_title', $instance['title'] );
 		$subtitle     = $instance['subtitle'];

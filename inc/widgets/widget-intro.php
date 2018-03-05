@@ -20,10 +20,12 @@ class Shapla_Portfolio_Widget_Intro extends WP_Widget {
 
 		echo $args['before_widget'];
 		?>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1><?php echo $content; ?></h1>
+        <div class="section-intro-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1><?php echo $content; ?></h1>
+                    </div>
                 </div>
             </div>
         </div>

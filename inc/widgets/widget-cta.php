@@ -34,7 +34,7 @@ class Shapla_Portfolio_Widget_Cta extends WP_Widget {
                 <div class="col-sm-4">
 					<?php if ( $text != '' ): ?>
                         <a href="<?php echo esc_url( $link ); ?>"
-                           class="btn btn-primary btn-lg btn-block"><?php echo esc_attr( $text ); ?></a>
+                           class="shapla-button shapla-button--blue shapla-button--large btn-block"><?php echo esc_attr( $text ); ?></a>
 					<?php endif; ?>
                 </div>
             </div>
