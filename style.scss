@@ -4,7 +4,7 @@ Theme URI: https://github.com/sayful1/shapla-portfolio
 Author: Sayful Islam
 Author URI: https://sayfulislam.com/
 Description: Minimalist Portfolio and Blogging WordPress Theme.
-Version: 1.0.4
+Version: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: custom-menu, featured-images, post-formats, sticky-post, translation-ready
@@ -1080,37 +1080,6 @@ a.post-thumbnail:focus {
   margin-top: 0;
 }
 
-.inner-section-divider {
-  text-align: center;
-  display: block;
-}
-
-.homepage-featured-item {
-  background-color: #F8F8F8;
-}
-
-.section-featured-posts .post-content {
-  padding: 15px;
-}
-
-.section-featured-posts .post-content h2 > a {
-  color: #000000;
-  font-size: 22px;
-}
-
-.section-featured-posts .post-content h2 > a:hover {
-  color: #333333;
-  text-decoration: none;
-}
-
-.section-recent-projects .hentry {
-  margin: 0;
-}
-
-.section-recent-projects .single-portfolio-item {
-  margin: 0 -15px;
-}
-
 /*--------------------------------------------------------------
 ## Template - Portfolio
 --------------------------------------------------------------*/
@@ -1697,4 +1666,41 @@ object {
   .comments-area {
     padding: 50px 15px;
   }
+}
+// Back to top button
+.back-to-top {
+	display: none;
+	background-color: rgba(#000, 0.5);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	height: 48px;
+	width: 48px;
+	z-index: 100000;
+	transition: all .2s ease-in-out 0s;
+
+	&::before {
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: '\f106';
+		font-size: 28px;
+		line-height: 48px;
+	}
+
+	&.is-active {
+		display: block;
+
+		&:hover {
+			background-color: rgba(#000, 0.8);
+		}
+	}
 }

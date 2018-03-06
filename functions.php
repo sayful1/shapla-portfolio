@@ -194,11 +194,11 @@ function shapla_portfolio_scripts() {
 	wp_enqueue_script( 'shapla-portfolio-html5', $assets . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'shapla-portfolio-html5', 'conditional', 'lt IE 9' );
 
+
+	wp_register_style( 'shapla-portfolio-icons', $assets . '/font-awesome/css/font-awesome.min.css',
+		array(), '4.1.0', 'all' );
+
 	if ( ! is_shaplatools_activated() ) {
-
-		wp_register_style( 'font-awesome', $assets . '/font-awesome/css/font-awesome.min.css',
-			array(), '4.1.0', 'all' );
-
 		wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/shuffle/jquery.shuffle.modernizr.min.js', array(), '3.2', true );
 		wp_register_script( 'shuffle', get_template_directory_uri() . '/assets/shuffle/jquery.shuffle.min.js', array(
 			'jquery',
@@ -212,7 +212,7 @@ function shapla_portfolio_scripts() {
 	), '3.2', true );
 
 	// Enqueue Styles & Scripts
-	wp_enqueue_style( 'font-awesome' );
+	wp_enqueue_style( 'shapla-portfolio-icons' );
 	wp_enqueue_style( 'bootstrap' );
 	wp_enqueue_script( 'bootstrap' );
 

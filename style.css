@@ -4,7 +4,7 @@ Theme URI: https://github.com/sayful1/shapla-portfolio
 Author: Sayful Islam
 Author URI: https://sayfulislam.com/
 Description: Minimalist Portfolio and Blogging WordPress Theme.
-Version: 1.0.4
+Version: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: custom-menu, featured-images, post-formats, sticky-post, translation-ready
@@ -475,6 +475,37 @@ img.alignnone {
     line-height: 1.5;
     margin: 0;
     padding: 0; }
+
+.section-featured-posts {
+  padding: 20px 0 50px; }
+  .section-featured-posts .post-content {
+    padding: 15px; }
+    .section-featured-posts .post-content h2 > a {
+      color: #000000;
+      font-size: 22px; }
+      .section-featured-posts .post-content h2 > a:hover {
+        color: #333333;
+        text-decoration: none; }
+  .section-featured-posts .grids:before, .section-featured-posts .grids:after {
+    display: table;
+    content: ""; }
+  .section-featured-posts .grids:after {
+    clear: both; }
+  .section-featured-posts .homepage-featured-item {
+    background-color: #f5f5f5; }
+  .section-featured-posts .section-cta {
+    display: block;
+    margin-bottom: 0; }
+
+.section-recent-projects {
+  padding: 20px 0 50px;
+  background-color: #f5f5f5; }
+  .section-recent-projects .section-title h1.title-wrapper {
+    background-color: #f5f5f5; }
+  .section-recent-projects .hentry {
+    margin: 0; }
+  .section-recent-projects .single-portfolio-item {
+    margin: 0 -15px; }
 
 /*Site Header*/
 .site-header {
@@ -971,30 +1002,6 @@ a.post-thumbnail:focus {
 .page-template-template-homepage .footer-widget-area {
   margin-top: 0; }
 
-.inner-section-divider {
-  text-align: center;
-  display: block; }
-
-.homepage-featured-item {
-  background-color: #F8F8F8; }
-
-.section-featured-posts .post-content {
-  padding: 15px; }
-
-.section-featured-posts .post-content h2 > a {
-  color: #000000;
-  font-size: 22px; }
-
-.section-featured-posts .post-content h2 > a:hover {
-  color: #333333;
-  text-decoration: none; }
-
-.section-recent-projects .hentry {
-  margin: 0; }
-
-.section-recent-projects .single-portfolio-item {
-  margin: 0 -15px; }
-
 /*--------------------------------------------------------------
 ## Template - Portfolio
 --------------------------------------------------------------*/
@@ -1489,5 +1496,34 @@ object {
 
   .comments-area {
     padding: 50px 15px; } }
+.back-to-top {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 48px;
+  width: 48px;
+  z-index: 100000;
+  transition: all .2s ease-in-out 0s; }
+  .back-to-top::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f106';
+    font-size: 28px;
+    line-height: 48px; }
+  .back-to-top.is-active {
+    display: block; }
+    .back-to-top.is-active:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
 
 /*# sourceMappingURL=style.css.map */

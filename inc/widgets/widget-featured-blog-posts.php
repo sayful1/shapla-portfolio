@@ -25,6 +25,7 @@ class Shapla_Portfolio_Widget_Featured_Posts extends WP_Widget {
 		$post_count  = $instance['post_count'];
 
 		echo $args['before_widget'];
+
 		?>
         <div class="container">
         <div class="row">
@@ -38,14 +39,12 @@ class Shapla_Portfolio_Widget_Featured_Posts extends WP_Widget {
         <div class="grids portfolio-items">
 			<?php
 
-			$args = array(
+			$the_query = new WP_Query( array(
 				'post_type'      => 'post',
 				'posts_per_page' => $post_count,
 				'meta_key'       => '_featured_post',
 				'meta_value'     => 1
-			);
-
-			$the_query = new WP_Query( $args );
+			) );
 
 			if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ): $the_query->the_post();
@@ -84,14 +83,13 @@ class Shapla_Portfolio_Widget_Featured_Posts extends WP_Widget {
 			?>
             <div class="text-center section-cta">
                 <a href="<?php echo esc_url( $button_link ); ?>"
-                   class="btn btn-primary btn-lg"><?php echo esc_attr( $button_text ); ?></a>
+                   class="shapla-button shapla-button--blue shapla-button--medium"><?php echo esc_attr( $button_text ); ?></a>
             </div>
             </div></div>
 			<?php
 		}
 
 		echo $args['after_widget'];
-
 	}
 
 	function update( $new_instance, $old_instance ) {

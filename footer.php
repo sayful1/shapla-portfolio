@@ -36,6 +36,9 @@
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<span id="shapla-back-to-top" class="back-to-top" data-distance="500">
+    <span class="screen-reader-text"><?php esc_html_e( 'Scroll to Top', 'shaplaportfolio' ) ?></span>
+</span>
 
 <?php wp_footer(); ?>
 

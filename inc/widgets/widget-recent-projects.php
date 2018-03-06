@@ -37,13 +37,11 @@ class Shapla_Portfolio_Widget_Recent_Projects extends WP_Widget {
         <div class="grids portfolio-items">
 			<?php
 
-			$args = array(
+			$the_query = new WP_Query( array(
 				'post_type'      => 'portfolio',
 				'posts_per_page' => $post_count,
 				'orderby'        => 'date'
-			);
-
-			$the_query = new WP_Query( $args );
+			) );
 
 			if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ): $the_query->the_post();
